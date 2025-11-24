@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="wraaper">
+    <form onsubmit="data(event)">
+      <h1 class="login">Login</h1>
+    <div class="btn">
+      <div class="btn1"><p>LogIn</p></div><a href="signup.html"><div class="btn2"><p>SignUp</p></div></a>
+    </div>
+    <div class="info">
+        <i id="info1" class="fa-solid fa-user"></i>
+        <input id="iuser" type="text" placeholder="Enter Username/Email id" required>
+      <br> <br>
+      <i id="info2" class="fa-solid fa-lock"></i>
+      <input id="password" type="password" placeholder="Password" required>
+    
+
+    </div>
+    <div class="subb">
+      <input class="logb" type="submit" value="Login">
+    </div>
+    <br>
+       <h4 class="line">or</h4> 
+    <div class="forpass">
+      <a href="#">Forget Password</a>
+    </div>
+    <div class="fb">
+      <a href="https://www.facebook.com"><div class="fblogo"></div></a>
+      <div class="fbtn"><a href="https://www.facebook.com">Log In With Facebook</a></div>
+    </div>
+      <div class="google">
+        <a href="https://www.google.com"><div class="glogo"></div></a>
+       <div class="gbtn"><a href="https://www.google.com">Log In With Google</a></div>
+    </div>
+  </div>
+  </form>
+  </div>
+</body>
+<script src="script.js"></script>
+
+</html>
