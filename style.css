@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Added this for easier layout management */
+}
+body {
+    background-image: url(dark-wavy-background_23-2148388252.jpg);
+    background-size: cover;
+    display: flex; /* Added flex to body to center the wrapper easily */
+    justify-content: center;
+    align-items: flex-start; /* Aligned to the top */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+}
+.wraaper {
+    margin-top: 50px; /* Adjusted margin-top */
+    /* margin-left: 450px;  Removed fixed margin-left, using flex for centering */
+    height: 630px;
+    width: 500px;
+    max-width: 90%; /* Added max-width for safety */
+    border: 1px solid black;
+    /* justify-content: center;  This was incorrect here, should be on parent */
+    padding: 20px; /* Added internal padding */
+}
+.login {
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    margin-left: 0; /* Resetting margin-left */
+    text-align: center; /* Centering text */
+    color: #fff;
+    margin-bottom: 30px;
+}
+.btn {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center; /* Centering the buttons */
+}
+.btn1, .btn2 {
+    justify-content: center;
+    height: 35px;
+    width: 90px;
+    border-radius: 20px;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-left: 10px; /* Reduced margin-left for better spacing */
+    margin-right: 10px;
+    padding: 0; /* Removed padding: 5x, using flex instead */
+    background-color: aqua;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    display: flex; /* Added flex to center p tag */
+    align-items: center;
+}
+.btn1 p, .btn2 p {
+    margin: 0; /* Removing internal margins */
+    text-align: center;
+    width: 100%;
+    line-height: 1; /* Adjust line-height */
+}
+.info {
+    margin-top: 44px;
+    text-align: center; /* Center the input fields container */
+}
+#iuser, #password, #cpassword {
+    padding: 10px; /* Increased padding */
+    margin-left: 0; /* Reset margin-left */
+    height: auto; /* Changed height to auto */
+    width: 90%; /* Using percentage for width */
+    max-width: 400px; /* Added max-width for control */
+    border-radius: 10px;
+    margin-bottom: 10px; /* Add margin below inputs */
+    display: block; /* Make inputs block-level */
+    margin-left: auto; /* Center inputs */
+    margin-right: auto; /* Center inputs */
+}
+#iuser {
+    background-color: rgb(200, 200, 231);
+}
+#password {
+    background-color: rgb(192, 192, 219);
+}
+#cpassword {
+    background-color: rgb(207, 207, 238);
+}
+.subb {
+    margin-top: 37px;
+    margin-left: 0; /* Reset margin-left */
+    text-align: center;
+}
+.logb {
+    height: 40px;
+    width: 80%; /* Adjusted width */
+    max-width: 240px; /* Added max-width */
+    padding: 2px;
+    border-radius: 10px;
+    background-color: rgb(153, 153, 221);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.line {
+    display: flex;
+    justify-content: center; /* Centering the line/separator */
+    margin-left: 0;
+}
+.forpass {
+    margin-left: 0; /* Reset margin-left */
+    margin-top: 30px;
+    text-align: center;
+}
+.forpass a {
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 100;
+}
+.fb, .google {
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 80%; /* Adjusted width */
+    max-width: 190px; /* Added max-width */
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-left: auto; /* Centering the buttons */
+    margin-right: auto; /* Centering the buttons */
+    display: flex;
+}
+.fblogo, .glogo {
+    margin-right: 8px;
+    height: 20px;
+    width: 20px;
+    background-size: cover;
+}
+.fblogo {
+    background-image: url(fb.jpg);
+}
+.glogo {
+    background-image: url(Google.logo.webp);
+}
+.gbtn a, .fbtn a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+
+/* --- Media Query for Tablets (max-width: 768px) --- */
+@media screen and (max-width: 768px) {
+    .wraaper {
+        width: 80%; /* Increased width for tablet */
+        max-width: 450px; /* Set a reasonable max-width */
+        margin-top: 30px;
+    }
+    .login {
+        font-size: 30px; /* Reduced font size */
+    }
+    .btn {
+        margin-top: 20px;
+    }
+}
+
+
+/* --- Media Query for Mobile Phones (max-width: 480px) --- */
+@media screen and (max-width: 480px) {
+    body {
+        /* On small screens, the background might look better fixed/smaller */
+        background-attachment: scroll; 
+    }
+    .wraaper {
+        width: 95%; /* Almost full width for mobile */
+        margin-top: 10px;
+        padding: 10px;
+        height: auto; /* Auto height on small screens */
+    }
+    .login {
+        font-size: 25px; /* Further reduced font size */
+        margin-bottom: 15px;
+    }
+    .btn {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+        margin-top: 10px;
+    }
+    .btn1, .btn2 {
+        width: 60%; /* Wider buttons when stacked */
+        max-width: 150px;
+        margin: 5px 0; /* Vertical margin between buttons */
+    }
+    .info {
+        margin-top: 20px;
+    }
+    #iuser, #password, #cpassword {
+        width: 95%; /* Wider input fields */
+    }
+    .subb {
+        margin-top: 25px;
+    }
+    .logb {
+        width: 90%;
+        max-width: 250px;
+    }
+    .fb, .google {
+        width: 60%;
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
